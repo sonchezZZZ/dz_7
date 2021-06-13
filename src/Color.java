@@ -1,4 +1,4 @@
-public enum Collor {
+public enum Color {
 
     RED(255, 140, 0),
     GREEN("#8A2BE2"),
@@ -10,14 +10,14 @@ public enum Collor {
     private int g;
     private int b;
 
-    Collor(String hex) {
+    Color(String hex) {
         this.hex = hex;
         this.r = Integer.parseInt(hex.substring(1, 3), 16);
         this.g = Integer.parseInt(hex.substring(3, 5), 16);
         this.b = Integer.parseInt(hex.substring(5), 16);
     }
 
-    Collor(int r, int g, int b) {
+    Color(int r, int g, int b) {
         this.r = r;
         this.b = b;
         this.g = g;

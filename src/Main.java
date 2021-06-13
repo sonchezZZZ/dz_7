@@ -13,10 +13,10 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         try {
             date = reader.readLine();
-            System.out.println(checkEmail(date));
+            System.out.println(checkDate(date));
             System.out.println("Print email");
             email = reader.readLine();
-            System.out.println(checkDate(email));
+            System.out.println(checkEmail(email));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -32,12 +32,12 @@ public class Main {
 
     //    second task
     public static String checkEmail(String email) {
-        String regex = "(@)(.*\\..*)";
+        String regex = "@(.*\\..*)";
         String domen = "";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
         if (matcher.find()) {
-            domen = matcher.group(2);
+            domen = matcher.group(1);
         }
         return domen;
     }
