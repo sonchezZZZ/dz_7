@@ -1,6 +1,6 @@
 public enum Color {
 
-    RED(255, 140, 0),
+    RED(120,	15,	226),
     GREEN("#8A2BE2"),
     BLUE("#00d3ff"),
     WHITE("#ffffff"),
@@ -24,11 +24,10 @@ public enum Color {
         this.hex = "";
         int[] colors = new int[]{r, g, b};
         for (int i : colors) {
-            if (i > 9) {
-                this.hex += Integer.toHexString(i);
+            if (i > 15) {
+                this.hex += Integer.toHexString(i);;
             } else {
-                this.hex += "0";
-                this.hex += Integer.toHexString(i);
+                this.hex += "0"+Integer.toHexString(i);
             }
         }
     }
@@ -38,7 +37,7 @@ public enum Color {
     }
 
     public String getRgb() {
-        String rgb = Integer.toString(r) + "," + Integer.toString(g) + "," + Integer.toString(b);
+        String rgb = ""+r+ "," + g+ "," + b;
         return rgb;
     }
 }
