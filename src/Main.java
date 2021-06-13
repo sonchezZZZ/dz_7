@@ -1,4 +1,3 @@
-import java.awt.Color;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -11,6 +10,8 @@ public class Main {
         String email = " ";
         System.out.println("Print date");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        Color color = Color.RED;
+        System.out.println(color.getHex());
         try {
             date = reader.readLine();
             System.out.println(checkDate(date));
